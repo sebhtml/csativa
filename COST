@@ -1,0 +1,20 @@
+512 MPI ranks
+
+One Nehalem chip has 4 cores.
+Intel® Hyper-Threading Technology gives 2 threads per core.
+Each Amazon cc1.4xlarge node has 16 logical cores.
+Each Amazon cc1.4xlarge node has 23 GB of memory.
+
+512/16 = 32 nodes.
+32*23 = 736 GB of distributed memory.
+
+Computation should finish in 24 hours.
+
+Pricing: $1.60 per hour in US East (Virginia).
+
+32*24*1.60 = 1228.80
+
+
+With this price, you may want to turn on Ray Checkpointing in case something goes wrong in the process.
+
+Option: -read-write-checkpoints
